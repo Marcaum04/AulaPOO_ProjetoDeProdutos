@@ -13,8 +13,8 @@ namespace Projetos_Produtos.Classes
         private string Nome;
         private string Email;
         private string Senha;
-        Produto ProdutoCadastro = new Produto();
-        Marca MarcaCadastro = new Marca();
+        Produto Produtinho = new Produto();
+        Marca marca = new Marca();
         Marca AntiErro = new Marca();
         private string MarcaAntiErro;
 
@@ -34,7 +34,7 @@ namespace Projetos_Produtos.Classes
         {
             Sair = false;
             AntiErro.Valores(0, "Sadia");
-            MarcaCadastro.Cadastrar(AntiErro);
+            marca.Cadastrar(AntiErro);
             do
             {
                 Console.WriteLine(@"
@@ -117,40 +117,42 @@ ______________________________________
                                                 Logado2 = false;
                                                 break;
                                             case "1":
+                                                Produto ProdutoCadastro = new Produto();
                                                 Console.Write("Digite o nome do produto: ");
                                                 string NomeProduto = Console.ReadLine();
 
                                                 Console.Write("Digite o preço do produto: ");
                                                 float PrecoProduto = float.Parse(Console.ReadLine());
 
-                                                MarcaCadastro.Listar();
+                                                marca.Listar();
                                                 Console.Write("Digite o código da marca do produto: ");
                                                 int MarcaEscolhida = int.Parse(Console.ReadLine());
-                                                MarcaAntiErro = MarcaCadastro.ListaMarcas.Find(x => x.CodigoMarca == MarcaEscolhida).NomeMarca;
+                                                MarcaAntiErro = marca.ListaMarcas.Find(x => x.CodigoMarca == MarcaEscolhida).NomeMarca;
 
                                                 ProdutoCadastro.Valores(ContProduto, NomeProduto, PrecoProduto, MarcaAntiErro,Nome);
-                                                Console.WriteLine(ProdutoCadastro.Cadastrar(ProdutoCadastro));
+                                                Console.WriteLine(Produtinho.Cadastrar(ProdutoCadastro));
                                                 ContProduto++;
                                                 break;
                                             case "2":
                                                 Console.Write($"Digite o código de qual produto deseja apagar: ");
-                                                ProdutoCadastro.Listar();
+                                                Produtinho.Listar();
                                                 int CodigoProduto = int.Parse(Console.ReadLine());
-                                                ProdutoCadastro.Deletar(ProdutoCadastro.ListaProdutos.Find(x => x.Codigo == CodigoProduto));
+                                                Produtinho.Deletar(Produtinho.ListaProdutos.Find(x => x.Codigo == CodigoProduto));
                                                 break;
                                             case "3":
+                                                Marca MarcaCadastro = new Marca();
                                                 Console.Write("Digite o nome da marca: ");
                                                 string NomeMarca = Console.ReadLine();
 
                                                 MarcaCadastro.Valores(ContMarca, NomeMarca);
-                                                Console.WriteLine(MarcaCadastro.Cadastrar(MarcaCadastro));
+                                                Console.WriteLine(marca.Cadastrar(MarcaCadastro));
                                                 ContMarca++;
                                                 break;
                                             case "4":
                                                 Console.Write($"Digite o código de qual produto deseja apagar: ");
-                                                MarcaCadastro.Listar();
+                                                marca.Listar();
                                                 int CodigoMarca = int.Parse(Console.ReadLine());
-                                                MarcaCadastro.Deletar(MarcaCadastro.ListaMarcas.Find(x => x.CodigoMarca == CodigoMarca));
+                                                marca.Deletar(marca.ListaMarcas.Find(x => x.CodigoMarca == CodigoMarca));
                                                 break;
                                             case "5":
                                                 Console.WriteLine(Deslogar());
@@ -161,10 +163,10 @@ ______________________________________
                                                 Console.WriteLine(NovoUsuario.Deletar(NovoUsuario));
                                                 break;
                                             case "7":
-                                                MarcaCadastro.Listar();
+                                                marca.Listar();
                                                 break;
                                             case "8":
-                                                ProdutoCadastro.Listar();
+                                                Produtinho.Listar();
                                                 break;
                                             default:
                                                 Console.WriteLine("Comando inválido");
