@@ -7,15 +7,15 @@ namespace Projetos_Produtos.Classes
     public class Marca : IMarca
     {
 
-        private int CodigoMarca;
+        public int CodigoMarca;
 
-        private string NomeMarca;
+        public string NomeMarca;
 
         private DateTime DataCadastro;
 
-        List<Marca> ListaMarcas = new List<Marca>();
-
-        public void ProdutoMarcas(int _CodigoMarca, string _Nomemarca)
+        public List<Marca> ListaMarcas = new List<Marca>();
+        
+        public void Valores(int _CodigoMarca, string _Nomemarca)
         {
             CodigoMarca = _CodigoMarca;
             NomeMarca = _Nomemarca;

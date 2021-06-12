@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\Projetos Produtos\\Projetos Produtos.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Projeto-Produtos\\Projetos Produtos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\Projetos Produtos\\Projetos Produtos.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Projeto-Produtos\\Projetos Produtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Projetos Produtos\\Projetos Produtos.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Projeto-Produtos\\Projetos Produtos.csproj",
         "projectName": "Projetos Produtos",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\Projetos Produtos\\Projetos Produtos.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Projeto-Produtos\\Projetos Produtos.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\Projetos Produtos\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Projeto-Produtos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"

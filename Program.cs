@@ -8,7 +8,6 @@ namespace Projetos_Produtos
         static void Main(string[] args)
         {
             Login inicio = new Login();
-
         }
     }
 }

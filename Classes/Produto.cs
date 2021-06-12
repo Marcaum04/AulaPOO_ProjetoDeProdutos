@@ -6,13 +6,20 @@ namespace Projetos_Produtos.Classes
 {
     public class Produto : IProduto
     {
-        private int Codigo;
+        public int Codigo;
         private string NomeProduto;
         private float Preco;
-        private string DataCadastro; 
+        private DateTime DataCadastro = DateTime.Now; 
         private string marca;
         private string CadastradoPor;
-        List<Produto> ListaProdutos = new List<Produto>();
+        public List<Produto> ListaProdutos = new List<Produto>();
+        public void Valores(int _Codigo, string _NomeProduto, float _Preco, string _marca, string _CadastradoPor){
+            Codigo = _Codigo;
+            NomeProduto = _NomeProduto;
+            Preco = _Preco;
+            marca = _marca;
+            CadastradoPor = _CadastradoPor;
+        }
         public string Cadastrar(Produto produto)
         {
             ListaProdutos.Add(produto);
@@ -35,8 +42,9 @@ namespace Projetos_Produtos.Classes
 Nome: {p.NomeProduto}
 Preço: {p.Preco:C2}
 Data de Cadastro: {p.DataCadastro}
+Codigo: {p.Codigo}
 Marca: {p.marca}
-Cadastrado por {CadastradoPor}"); 
+Cadastrado por {p.CadastradoPor}"); 
             }
         }
     }
